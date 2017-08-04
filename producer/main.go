@@ -73,7 +73,11 @@ func message(c *gin.Context) {
 func Producemethod() {
 	//return "produceMethodCalled"
 	//message()
-	fmt.Println("producermethodcalled");
+	router := gin.Default()
+        router.POST("/",message)
+        router.Run(":3000")
+
+	fmt.Println("producermethodcalledkkkk");
 }
 /*
 func main() {
